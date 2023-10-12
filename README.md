@@ -51,7 +51,7 @@ $
 ***
 **Authors**
 
-This project was developed by the following individuals:
+This project was developed by:
 
 Daniel Dzrekey
 

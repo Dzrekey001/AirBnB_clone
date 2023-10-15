@@ -34,10 +34,9 @@ class HBNBCommand(cmd.Cmd):
             if do_command and class_name:
                 command = "{} {}".format(do_command, class_name)
                 if arguments:
-                    reg = r"""^(?:\"([a-f0-9-]+)\")?(?:(?:\s*,\s*\"(.+?)\")
-                                ?\s*,\s*(\".+?\")|\s*,\s*(\{.*?\}))?$
-                            """
+                    reg = r"^(?:\"([a-f0-9-]+)\")?(?:(?:\s*,\s*\"(.+?)\")?\s*,\s*(\".+?\")|\s*,\s*(\{.*?\}))?$"
                     arg_result = re.match(reg, arguments)
+
                     if arg_result:
                         if class_id := arg_result.group(1):
                             command = "{} {}".format(command, class_id)
@@ -89,9 +88,7 @@ class HBNBCommand(cmd.Cmd):
             (hbnb) update <class name> <class id> <attribute name>
             <attribute value>
         """
-        regex = r"""^(\w+)?\s([a-f0-9-]+)?(?:\s([^\"]+?)?
-                    \s\"(.+?)?\"|\s(\{.+?\}))?
-                """
+        regex = r"^(\w+)?\s([a-f0-9-]+)?(?:\s([^\"]+?)?\s\"(.+?)?\"|\s(\{.+?\}))?"
         result = re.search(regex, line)
         class_name = result.group(1)
         class_id = result.group(2)

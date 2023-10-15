@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+"""Module to create Place class"""
 from models.base_model import BaseModel
 
 
 class Place(BaseModel):
-    """Class to define Place"""
+    """Defines all attributes for Place"""
+
     city_id = ""
     user_id = ""
     name = ""
@@ -14,4 +16,4 @@ class Place(BaseModel):
     price_by_night = 0
     latitude = 0.0
     longitude = 0.0
-    amenity_id = []
+    amenity_ids = []

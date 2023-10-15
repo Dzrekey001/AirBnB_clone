@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""Module for creating an Amenity class"""
 from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """Class to define City"""
+    """Defines the Aminity class"""
     state_id = ""
     name = ""

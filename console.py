@@ -130,7 +130,6 @@ class HBNBCommand(cmd.Cmd):
                 (hbnh) all
                 (hbnh) all <class name>
         """
-        print("All line input:", line)
         line = line.split(" ")
         if line[0] == "":
             str_rep = [obj.__str__() for obj in storage.all().values()]

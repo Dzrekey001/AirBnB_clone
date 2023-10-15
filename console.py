@@ -7,6 +7,7 @@ import ast
 
 
 class HBNBCommand(cmd.Cmd):
+    """Main class definition for the console module"""
 
     prompt = "(hbnb) "
 
@@ -68,6 +69,8 @@ class HBNBCommand(cmd.Cmd):
         print(total_count)
 
     def check_if_dict(self, dictionary):
+        """Function to check if if an input is a dictionary"""
+
         to_dict = None
         try:
             to_dict = ast.literal_eval(dictionary)
@@ -237,5 +240,5 @@ class HBNBCommand(cmd.Cmd):
         return True
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     HBNBCommand().cmdloop()

@@ -148,7 +148,8 @@ class TestHBNBCommand(unittest.TestCase):
     def test_update_missing_attribute(self, mock_stdout):
         """Test do_update() method with missing attribute"""
         self.console.do_update("BaseModel 123")
-        self.assertEqual(mock_stdout.getvalue(), "** attribute name missing **\n")
+        self.assertEqual(mock_stdout.getvalue(),
+                         "** attribute name missing **\n")
 
     @patch('sys.stdout', new=io.StringIO())
     def test_update_missing_value(self, mock_stdout):
